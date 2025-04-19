@@ -8,7 +8,11 @@ const port = 5000;
 
 // Middleware to parse JSON bodies
 app.use(express.json());
-app.use(cors())
+app.use(cors(    {
+    origin : ["https://swiggy-c-lone-practice-psi.vercel.app/"],
+    methods : ['GET','POST', 'PUT', 'DELETE', 'GET', 'PATCH'],
+    credentials : true
+}))
 app.use(express.static("public"));
 
 // Endpoint to get data from category.json
