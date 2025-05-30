@@ -9,7 +9,7 @@ const port = process.env.PORT || 5000;
 // Middleware to parse JSON bodies
 app.use(express.json());
 app.use(cors(    {
-    origin : ["https://swiggy-c-lone-practice-psi.vercel.app"],
+    origin : ["https://swiggy-c-lone-practice-psi.vercel.app","http://localhost:5173"],
     methods : ['GET','POST', 'PUT', 'DELETE', 'GET', 'PATCH'],
     credentials : true
 }))
